@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理员主页</title>
+<style>
+	    body {font-family: 张海山锐谐体;
+		color:#F36;}
+		#title {
+	    font-family:"Microsoft Yahei";
+		position: fixed;
+        left: 0px;
+        top: 0px;
+		right:0px;
+		width:98.6%;
+		background-color:#F69;
+		padding-top:1px;
+		padding-botom:20px;
+		color:#FFF;
+		border-width:10px;
+		border-style:solid;
+        border-color:#C9F;
+		}
+	#formbackground{
+	    position: absolute;
+        right: 0px;
+        bottom: 0px;
+		width:47%; 
+		height:47%;
+		/*text-align:center;*/
+		z-index:-1;
+		}
+		a{
+		display:inline-block;
+		background:#F36;
+		padding:5px 7px;
+		border-style:solid;
+		border-color:#C9F;}
+		a{ color:#FFF; text-decoration:none;}
+        a:hover{ color:#C9F; text-decoration:underline;}
+        a:active{ color:#3FF;}
+		table{
+			color:#FFF;}
+		input{
+	        background-color:#ffffff;color:#F36;border-color:#C9F}
+</style>
+</head>
+
+ <body>
+   <div id="formbackground">  
+   <img src="pic1.jpg" >  
+   </div>
+   <div id="title">
+    <p id="date" align=right><!-- #BeginDate format:fCh2m -->2016年6月4日 星期六   21:20<!-- #EndDate --></p>
+    <center><h1>管理员主页</h1></center><br>
+  </div>
+  <br><br><br><br><br><br><br><br><br>
+{{ hospital }}的
+{{ name }}您好<br><br>
+<center>
+<a href= "adminlogout">点我登出。。</a>
+<a href= "doctorinsert">插入医生</a>
+<a href= "doctorchange">修改医生信息</a>
+<a href= "doctordelete">删除医生</a>
+<a href= "doctorlist">医生列表</a>
+
+
+<a href= "patientinsert">插入患者</a>
+<a href= "patientchange">修改患者信息</a>
+<a href= "patientdelete">删除患者</a>
+<a href= "patientlist">患者列表</a>
+<br><br /><br>
+
+<form method="post" action="xuwang.php">
+<table width=50% bgcolor="#F36" bordercolor="#C9F" border="8">
+<tr><th><input type="text" id="shijian1" name="shijian1">查看详细信息<input type="submit" value="详情" ></th></tr>
+<tr><th><input type="text" id="shijian2" name="shijian2">查看详细信息<input type="submit" value="详情" ></th></tr>
+<tr><th><input type="text" id="shijian3" name="shijian3">查看详细信息<input type="submit" value="详情" ></th></tr>
+<tr><th><input type="text" id="shijian4" name="shijian4">查看详细信息<input type="submit" value="详情" ></th></tr>
+<tr><th><input type="text" id="shijian5" name="shijian5">查看详细信息<input type="submit" value="详情" ></th></tr>
+
+{%for p in pid%}
+<tr><th><input type="text" id="shijian5" name="shijian5">查看详细信息<input type="submit" value="详情" ></th></tr>
+{{p}}
+{% endfor %}
+</table>
+</form>
+<br><br>
+<font size=20><a href="mypatient.html">进入患者界面</a></font>
+</center>
+
+</body>
+</html>

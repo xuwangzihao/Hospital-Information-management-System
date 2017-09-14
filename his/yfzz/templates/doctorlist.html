@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>医生列表</title>
+</head>
+<style>
+	body {font-family: 张海山锐谐体;
+	color:#F36}
+	#title {
+		font-family:"Microsoft Yahei";
+		position: fixed;
+        left: 0px;
+        top: 0px;
+		right:0px;
+		width:98.6%;
+		background-color:#F69;
+		padding-top:1px;
+		padding-botom:20px;
+		color:#FFF;
+		border-width:10px;
+		border-style:solid;
+        border-color:#C9F;
+		}
+	#formbackground{
+	    position: absolute;
+        right: 0px;
+        bottom: 0px;
+		width:47%; 
+		height:47%;
+		/*text-align:center;*/
+		z-index:-1;
+		}
+		a{ color:#F36; text-decoration:none;}
+        a:hover{ color:#C9F; text-decoration:underline;}
+        a:active{ color:#3FF;}
+</style>
+<body>
+  <div id="formbackground">  
+   <img src="pic1.jpg" >  
+  </div>
+  <div id="title">
+    <p id="date" align=right><!-- #BeginDate format:fCh2m -->2016年6月4日 星期六   22:59<!-- #EndDate --></p>
+    <center><h1>医生列表</h1></center>
+  </div>
+  <br><br><br><br><br><br><br><br>
+<center> 
+{% for i in doctorlist %}
+{{ i.name }}{{ i.did }}<a href= "/doctorlist/?did={{ i.did }}">详情</a><br>
+{% endfor %}
+</center>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理员操作</title>
+<style type="text/css">
+    body {
+		font-family: 张海山锐谐体;
+	    color:#FFF}
+	#title {
+		font-family:"Microsoft Yahei";
+		position: fixed;
+        left: 0px;
+        top: 0px;
+		right:0px;
+		width:98.6%;
+		background-color:#F69;
+		padding-top:1px;
+		padding-botom:20px;
+		color:#FFF;
+		border-width:10px;
+		border-style:solid;
+        border-color:#C9F;
+		}
+	#formbackground{
+	    position: absolute;
+        right: 0px;
+        bottom: 0px;
+		width:47%; 
+		height:47%;
+		/*text-align:center;*/
+		z-index:-1;
+		}
+    input{
+	    background-color:#ffffff;color:#F36;border-color:#C9F}
+	.contant{
+		width:600px;
+		top:auto;
+		border-width:10px;
+        border-style:solid;
+        border-color:#C9F;
+		padding:15px 30px;
+		/*display:inline-block; */
+        text-align:center;
+		background-color:#F36;}
+	textarea{
+		color:#F36}
+    a{ color:#FFF; text-decoration:none;}
+    a:hover{ color:#C9F; text-decoration:underline;}
+    a:active{ color:#3FF;}
+
+</style>
+</head>
+
+<body>
+ <div id="formbackground">  
+   <img src="pic1.jpg" >  
+  </div>
+  <div id="title">
+    <p id="date" align=right><!-- #BeginDate format:fCh2m -->2016年6月4日 星期六   22:33<!-- #EndDate --></p>
+    <center><h1>请确认是这个用户么</h1></center><br>
+  </div>
+  <br><br><br><br><br><br><br><br><br>
+<center>
+<form method="post">
+{% csrf_token %}
+<div class="contant">
+账号<input name="id" type="text"  value="{{ inpid }}" size="20" maxlength="20" readonly="readonly"/><br>
+密码<input name="password" type="text" value="{{ inpassword }}" size="20" maxlength="20" readonly="readonly"/><br><!-- 密码位数限制20位 -->
+姓名<input name="name" type="text" value="{{ inname }}" size="20" maxlength="20" readonly="readonly"/><br>
+主治医生
+<select name="doctor">
+    <option value="{{ indoctor.did }}">{{ indoctor.name }}-{{ indoctor.did }}</option>
+</select><br>
+详情<textarea name="info" cols="40" rows="10" readonly="readonly">{{ ininfo }}</textarea><br>
+<br>
+
+<input type="submit" value="确认" /><!-- 点击登录按钮，把表单数据传给服务器 --><br><br>
+</form>
+
+
+
+<font size=5><a href= "{{ goback }}">点此取消</a></font></center>
+</div>
+</body>
+</html>

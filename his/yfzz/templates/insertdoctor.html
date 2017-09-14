@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医生登录界面</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: 张海山锐谐体;
+}
+-->
+</style>
+</head>
+
+<body background="17201098.png">
+<div align=right><!-- #BeginDate format:fCh2m -->2016年5月3日 星期二   16:44<!-- #EndDate --></div>
+
+<center><h1>医生登录界面</h1>
+<br><br><br>
+<form method="post">
+{% csrf_token %}
+{{ form }}
+{{e}}
+<input type="submit" value="添加" /><!-- 点击登录按钮，把表单数据传给服务器 --><br>
+</form>
+<font size=5><a href= "adminhomepage">点此取消</a></font></center>
+
+</body>
+</html>

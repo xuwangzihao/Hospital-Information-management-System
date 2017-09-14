@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D_patientlist</title>
+</head>
+<body>
+{% for i in patientlist %}
+{{ i.name }}{{ i.pid }}<a href= "/d_patientlist/?pid={{ i.pid }}">详情</a><br>
+{% endfor %}
+</body>
+</html>

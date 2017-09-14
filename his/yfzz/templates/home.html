@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录界面</title>
+<style type="text/css">
+
+    /*body {background:url(pic1.jpg)}*/
+	body {font-family: 张海山锐谐体;}
+	#title {font-family:"Microsoft Yahei";}
+    .login {
+		width:25%;
+	    position:
+		top:auto;
+		border-width:4px;
+        border-style:solid;
+        border-color:#C9F;
+		padding:15px 30px;
+		/*display:inline-block; */
+        text-align:center;
+		font-size:250%;
+		background-color:#F36;}
+	#title {
+		position: fixed;
+        left: 0px;
+        top: 0px;
+		right:0px;
+		width:98.7%;
+		background-color:#F69;
+		padding-top:1px;
+		padding-botom:20px;
+		color:#FFF;
+		border-width:10px;
+		border-style:solid;
+        border-color:#C9F;
+		}
+	#formbackground{
+	    position: absolute;
+        right: 0px;
+        bottom: 0px;
+		width:47%; 
+		height:47%;
+		/*text-align:center;*/
+		z-index:-1;
+		}
+	#line{
+		width:100%;
+		position:fixed;
+		left:0px;
+		top:156px;}
+    a{ color:#FFF; text-decoration:none;}
+    a:hover{ color:#C9F; text-decoration:underline;}
+    a:active{ color:#3FF;}
+
+</style>
+</head>
+ <body>
+   <div id="formbackground">  
+   <img src="pic1.jpg" >  
+   </div>
+  <div id="title">
+    <p id="date" align=right><!-- #BeginDate format:fCh2m -->{{ today }}<!-- #EndDate --></p>
+    <center><h1>智能医院产前转诊系统</h1></center><br>
+  </div>
+  <div id="line"><hr size=5 color="#3FF"></div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <center><div id="doctorlogin" class="login"><a href="doctorlogin" target="_blank">医生登录界面</a></div><br><br>
+  <div id="patientlogin" class="login"><a href="patientlogin" target="_blank">用户登录界面</a></div><br><br>
+  <div><a href="adminlogin" target="_blank"><font color="ffffff" size="20">管理员登录</font></a></div><br><br>
+  <div><a href="test" target="_blank"><font color="ffffff" size="20">>>>>>>>>>>>>>>>>>>>TEST<<<<<<<<<<<<<<<<<<<<</font></a></div><br><br>
+  <div id="friendurl">友情链接：<a href="http://www.bilibili.com" title="我是彩蛋2333" target="_blank"><font color="ffffff">》》》》点击访问中国最大同性交友社区《《《《</font></a></div></center>
+  <font color="ffffff">版权声明</font>
+
+</body>
+</html>

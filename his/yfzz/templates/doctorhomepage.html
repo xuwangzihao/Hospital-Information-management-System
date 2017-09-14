@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医生主页</title>
+<style>
+body {font-family: 张海山锐谐体;
+		color:#F36;}
+		#title {
+	    font-family:"Microsoft Yahei";
+		position: fixed;
+        left: 0px;
+        top: 0px;
+		right:0px;
+		width:98.6%;
+		background-color:#F69;
+		padding-top:1px;
+		padding-botom:20px;
+		color:#FFF;
+		border-width:10px;
+		border-style:solid;
+        border-color:#C9F;
+		}
+	#formbackground{
+	    position: absolute;
+        right: 0px;
+        bottom: 0px;
+		width:47%; 
+		height:47%;
+		/*text-align:center;*/
+		z-index:-1;
+		}
+		.contant{
+	    width:600px;
+		top:auto;
+		border-width:10px;
+        border-style:solid;
+        border-color:#C9F;
+		padding:15px 30px;
+		/*display:inline-block; */
+        text-align:center;
+		color:#FFF;
+		background-color:#F36;}
+	a{ color:#FFF; text-decoration:none;}
+    a:hover{ color:#C9F; text-decoration:underline;}
+    a:active{ color:#3FF;}
+	#logout{
+	   color:#F36; text-decoration:none;
+       color:#C9F; text-decoration:underline;
+       color:#3FF;
+		}
+	#href{
+		width:300px;
+	    position:
+		top:auto;
+		border-width:4px;
+        border-style:solid;
+        border-color:#C9F;
+		padding:15px 30px;
+		/*display:inline-block; */
+        text-align:center;
+		font-size:20px;
+		background-color:#F36;}
+</style>
+</head>
+
+<body>
+   <div id="formbackground">  
+   <img src="pic1.jpg" >  
+   </div>
+   <div id="title">
+    <p id="date" align=right><!-- #BeginDate format:fCh2m -->2016年6月4日 星期六   21:44<!-- #EndDate --></p>
+    <center><h1>医生主页</h1></center><br>
+   </div>
+   <br><br><br><br><br><br><br><br><br>
+  
+{{ hospital }}的
+{{ name }}您好
+<a href= "doctorlogout" id="logout">点我登出。。</a><br><br>
+<center>
+<div class="contant">
+
+{% for i in mlist %}
+{{ i.title }}<a href= "/doctorhomepage/?pid={{ i.pid }}">详情</a><br>
+{% endfor %}<br>
+</div><br><br>
+<div id="href"><font size=20><a href="dpatientlist">进入患者界面</a></font>
+</center>
+
+</body>
+</html>
